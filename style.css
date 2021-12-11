@@ -1,0 +1,153 @@
+:root{
+    --bg: rgb(127, 255, 212);
+    --border: solid 2px black;
+    --btnHover: #976396;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Shippori Antique', sans-serif;
+    
+}
+
+body,html{
+    position: relative;
+    background-image: url(https://freefrontend.com/assets/img/css-background-patterns/simple-pattern-with-css3.png);
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+
+button{
+    background: var(--backG);
+    border: solid 2px var(--bg);
+    border: var(--border);
+    border-radius: 5%;
+    transition: all .5s ease-in-out;
+}
+
+button:hover{
+    cursor: pointer;
+    background: var(--btnHover) !important;
+    color: white;   
+}
+
+#food{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 50% 50%;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 2%;
+}
+
+li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 25%;
+    min-height: 3%;
+    font-size: 2.3vmin;
+    padding: 7px;
+    background-color: var(--bg);
+    border: var(--border);
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 5px #000000;
+    
+}
+
+#foodName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--bg);
+    font-size: 2.5vmin;
+}
+
+#img{
+    grid-row: span 2;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+}
+
+.imgBtn:first-child, .imgBtn:last-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    width: 25%;
+    height: 13%;
+    background-color: var(--bg);
+    font-size: 1.7vmin;
+}
+
+.imgBtn:last-child{
+    transform: translate(-100%, 0);
+    left: 95%;
+}
+
+.imgBtn:first-child::after{content: 'Click here to randomize';}
+.imgBtn:last-child::after{content: 'YouTube tutorial';}
+
+#iContainer{
+    display: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 80%;
+}
+
+#iF{
+    width: 100%;
+    height: 100%;
+}
+
+#iBtn{
+    display: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 0;
+    padding: 15px;
+    left: 100%;
+    background: #976396;
+}
+
+@media (max-width: 640px){
+
+    #fontName{font-size: 24px;}
+
+    body{height: 140vh;}
+    
+    #food{
+        grid-template-rows: 10% 50% 40%;
+        grid-template-columns: 100%;
+    }
+    
+    #img{grid-row: span 1;}
+
+    li{
+        padding: 10px;
+        min-width: 15%;
+    }
+}
