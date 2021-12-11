@@ -1,4 +1,4 @@
-# Basic API project - [Click here to go to the link]()
+# Basic API project - [Click here to go to the link](https://gpmotta21.github.io/API-Project/)
 
 > In this project, I created a basic website that takes information from a random food through a food API (name, ingredients, and an image) and displays it to the user.
 
